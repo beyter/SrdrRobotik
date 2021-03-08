@@ -9,7 +9,36 @@
       "client_info": {
         "mobilesdk_app_id": "1:275598880648:android:f7f65771c53820794d143d",
         "android_client_info": {
-          "package_name": "com.example.srdrrobotik"
+          "package_name": "com.srdr.srdrrobotik"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "275598880648-keup2jgv3l8be4nuov9i61c7suuk73re.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDI5jMADqS8lifEk9eyswC8N6RpZBUWVdA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "275598880648-keup2jgv3l8be4nuov9i61c7suuk73re.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:275598880648:android:34ac7758da491c404d143d",
+        "android_client_info": {
+          "package_name": "com.srdr.srdrrobotik"
         }
       },
       "oauth_client": [
