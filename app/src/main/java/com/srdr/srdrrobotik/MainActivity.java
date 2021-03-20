@@ -1,14 +1,18 @@
 package com.srdr.srdrrobotik;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.srdr.srdrrobotik.model.InstagramActivity;
 import com.srdr.srdrrobotik.model.UserAuthInfo;
 
 public class MainActivity extends AppCompatActivity {
@@ -17,11 +21,21 @@ public class MainActivity extends AppCompatActivity {
 
     private EditText userNameEdit;
     private EditText userPassEdit;
+    ImageButton imageButtonWhatsapp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        imageButtonWhatsapp=(ImageButton) findViewById(R.id.imageButtonWhatsapp);
+        imageButtonWhatsapp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri uri=Uri.parse("tel: 5549687737");
+                Intent intent=new Intent(Intent.ACTION_DIAL,uri);
+                startActivity(intent);
+            }
+        });
         init();
     }
 
@@ -54,6 +68,20 @@ public class MainActivity extends AppCompatActivity {
 
     public void goToSignUp(View view) {
         startActivity(new Intent(this, SignUpActivity.class));
+    }
+
+    public void goToFacebook(View view) {
+        startActivity(new Intent(this, FacebookActivity.class));}
+    public void goToLinkedin(View view) {
+        startActivity(new Intent(this, LinkedinActivity.class));}
+    public void goToYoutube(View view) {
+        startActivity(new Intent(this, YoutubeActivity.class));
+    }
+    public void goToInstagram(View view) {
+        startActivity(new Intent(this, InstagramActivity.class));
+    }
+    public void goToSystem(View view) {
+        startActivity(new Intent(this, SystemActivity.class));
     }
 
     private UserAuthInfo readUserInfo() {

@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.srdr.srdrrobotik">
 
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,9 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SrdrRobotik">
-        <activity android:name="com.srdr.srdrrobotik.LoginActivity" android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
-        <activity android:name="com.srdr.srdrrobotik.SignUpActivity" />
-        <activity android:name="com.srdr.srdrrobotik.MainActivity">
+        <activity android:name=".FacebookActivity" />
+        <activity android:name=".LinkedinActivity" />
+        <activity android:name=".model.InstagramActivity" />
+        <activity android:name=".YoutubeActivity" />
+        <activity android:name=".WebActivity" />
+        <activity android:name=".SystemActivity" />
+        <activity
+            android:name=".LoginActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".SignUpActivity" />
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
