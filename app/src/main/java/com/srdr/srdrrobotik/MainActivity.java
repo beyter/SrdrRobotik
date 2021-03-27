@@ -7,9 +7,11 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TableLayout;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.ViewPager;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.srdr.srdrrobotik.model.InstagramActivity;
@@ -22,12 +24,17 @@ public class MainActivity extends AppCompatActivity {
     private EditText userNameEdit;
     private EditText userPassEdit;
     ImageButton imageButtonWhatsapp;
+    private ViewPager viewPager;
+    private TableLayout tableLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         imageButtonWhatsapp=(ImageButton) findViewById(R.id.imageButtonWhatsapp);
+        viewPager = (ViewPager) findViewById(R.id.pager_view);
+
+
         imageButtonWhatsapp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
